@@ -9,15 +9,14 @@ function init(bundle, parent, options = {}) {
     fullScreen: true,
     ...options,
   });
-
-  // Render your app content to the default cylinder surface
+  
   r360.renderToSurface(
-    r360.createRoot('holaamor', { /* initial props */ }),
+    r360.createRoot('lovetest', { /* initial props */ }),
     r360.getDefaultSurface()
   );
 
   // Load the initial environment
-  r360.compositor.setBackground(r360.getAssetURL('360_world.jpg'));
+  r360.compositor.setBackground(r360.getAssetURL('30026348064_58410ce1fe_o.jpg'));
 }
 
 window.React360 = {init};
