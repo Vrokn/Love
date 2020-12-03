@@ -1,7 +1,7 @@
 // This file contains the boilerplate to execute your React app.
 // If you want to modify your application's content, start in "index.js"
 
-import {ReactInstance} from 'react-360-web';
+import { ReactInstance, Surface } from "react-360-web";
 
 function init(bundle, parent, options = {}) {
   const r360 = new ReactInstance(bundle, parent, {
@@ -9,14 +9,18 @@ function init(bundle, parent, options = {}) {
     fullScreen: true,
     ...options,
   });
-  
+
   r360.renderToSurface(
-    r360.createRoot('lovetest', { /* initial props */ }),
-    r360.getDefaultSurface()
+    r360.createRoot("lovetest", {
+      /* initial props */
+    }),
+    new Surface(4680, 1200, Surface.SurfaceShape.Cylinder)
   );
 
   // Load the initial environment
-  r360.compositor.setBackground(r360.getAssetURL('30026348064_58410ce1fe_o.jpg'));
+  r360.compositor.setBackground(
+    r360.getAssetURL("30026348064_58410ce1fe_o.jpg")
+  );
 }
 
-window.React360 = {init};
+window.React360 = { init };
