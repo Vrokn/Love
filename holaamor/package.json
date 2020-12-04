@@ -1,4 +1,5 @@
-{ "homepage": "http://vrokn.github.io/Love"  ,
+{
+  "homepage": "http://vrokn.github.io/Love",
   "name": "lovetest",
   "version": "0.0.1",
   "private": true,

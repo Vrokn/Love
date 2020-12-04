@@ -12,15 +12,20 @@ import {
 import sonidos from "./components/Sonidos";
 const { AudioModule } = NativeModules;
 export default class lovetest extends React.Component {
-  
   render() {
     return (
-      <View>
+      <View style={styles.panel}>
         {sonidos.map((item, index) => (
           <VrButton
             onClick={() => {
               AudioModule.playOneShot({
                 source: asset(`${item.sound}`),
+                is3d: true,
+                position: [
+                  Math.floor(Math.random() * 3) + 1,
+                  Math.floor(Math.random() * 3) + 1,
+                  0,
+                ],
               });
             }}
             key={index}
@@ -35,11 +40,10 @@ export default class lovetest extends React.Component {
               borderColor: "#373854",
               borderWidth: 4,
               position: "absolute",
-              left: Math.floor(Math.random() * 4400) + 150,
-              top: Math.floor(Math.random() * 1000) + 150,
+              left: Math.floor(Math.random() * 3946) + 1,
+              top: Math.floor(Math.random() * 930) + 1,
             }}
-          >
-         </VrButton>
+          ></VrButton>
         ))}
       </View>
     );
@@ -52,11 +56,9 @@ const styles = StyleSheet.create({
   },
   panel: {
     // Fill the entire surface
-    width: 4000,
-    height: 600,
-    backgroundColor: "rgba(255, 255, 255, 0.5)",
-    justifyContent: "center",
-    alignItems: "center",
+    width: 4096,
+    height: 1080,
+    backgroundColor: "rgba(0, 0, 0, 0.01)",
   },
 });
 
