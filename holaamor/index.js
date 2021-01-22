@@ -22,9 +22,9 @@ export default class lovetest extends React.Component {
                 source: asset(`${item.sound}`),
                 is3d: true,
                 position: [
-                  Math.floor(Math.random() * 3) + 1,
-                  Math.floor(Math.random() * 3) + 1,
-                  0,
+                  Math.floor(Math.random() * 3) -Math.floor(Math.random() * 7),
+                  Math.floor(Math.random() * 3) -Math.floor(Math.random() * 7),
+                  Math.floor(Math.random() * 3) -Math.floor(Math.random() * 7),
                 ],
               });
             }}
